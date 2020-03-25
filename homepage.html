@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homepage</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+</head>
+<body class="ombre">
+	<h1>
+	        <div class="container" onclick="toggleNav(this)">
+	        	<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+	        </div>
+	      	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    </h1>
+  	</div>
+	<div id="mySidenav" class="sidenav">
+  		<button class="dropdown-btn">Bookmarks<i class="fa fa-caret-down"></i></button>
+		<div class="dropdown-container">
+		    <a href="Add.html">View Bookmarks</a>
+        <a href="Add1.html">Edit Bookmarks</a>
+		</div>
+    <button class="dropdown-btn">History<i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-container">
+    <a href="R1.html">View History</a>
+  </div>
+</div>
+<script>
+function toggleNav(x) {
+	  x.classList.toggle("change");
+  	 if(document.getElementById("mySidenav").style.width === "240px")
+  	 	document.getElementById("mySidenav").style.width = "0px";
+  	 else
+  	 	document.getElementById("mySidenav").style.width ="240px";
+}
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.height === "110px") {
+  dropdownContent.style.height = "0px";
+  }
+  else {
+  dropdownContent.style.height="110px";
+  }
+  });
+}
+</script>
+<center><h2>Smoogle</h2></center>
+<div class="search">
+<form action='searchresults.html' target="searchresults.html">
+<input name='cx' type='hidden' value='007796426008779968972:lpshgjjdxs1'/>
+<input type='text' name='q' size='35' />
+<input name='ie' type='hidden' value='ISO-8859-1'/>
+<input type="submit" name="sa" value="Search" />
+<input type="hidden" name="cof" value="FORID:10" />
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+</div>
+</div>
+    <div class="footer">
+    <a class="footer" href="news.html" style="margin-left: 80px;">News</a>
+    <a class="footer" href="weather.html">Weather</a>
+    <a class="footer" href="favourites.html">Favourites</a>
+    <i class="fab fa-reddit-alien" style="margin-right: 100px;"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook-f"></i>
+</div>
+</body>
+</html>
